@@ -11,7 +11,7 @@ import UIKit
 class ViewController: UIViewController {
 
     var x = 0
-    var temp = 0
+    var temp:Double = 0
     
     @IBOutlet weak var dateframe: UITextField!
     
@@ -55,6 +55,9 @@ class ViewController: UIViewController {
         dateframe.text = dateframe.text! + "0"
     }
     
+    @IBAction func dot(_ sender: Any) {
+        dateframe.text = dateframe.text! + "."
+    }
     
     @IBAction func clear(_ sender: Any) {
         temp = 0
@@ -62,7 +65,7 @@ class ViewController: UIViewController {
     }
     @IBAction func add(_ sender: Any) {
         x = 1
-        temp = temp + Int(dateframe.text!)!
+        temp = temp + Double(dateframe.text!)!
         dateframe.text = ""
         
     }
@@ -70,45 +73,45 @@ class ViewController: UIViewController {
     @IBAction func caculater(_ sender: Any) {
         if(x == 1)
         {
-        var sum = 0
-        sum = temp + Int(dateframe.text!)!
+        var sum:Double = 0
+        sum = temp + Double(dateframe.text!)!
         dateframe.text = "\(sum)"
         }
         if(x == 2)
         {
-            var sum = 0
-            sum = temp - Int(dateframe.text!)!
+            var sum:Double = 0
+            sum = temp - Double(dateframe.text!)!
             dateframe.text = "\(sum)"
         }
         if(x == 3)
         {
-            var sum = 0
-            sum = temp * Int(dateframe.text!)!
+            var sum:Double = 0
+            sum = temp * Double(dateframe.text!)!
             dateframe.text = "\(sum)"
         }
         if(x == 4)
         {
-            var sum = 0
-            sum = temp * Int(dateframe.text!)!
+            var sum:Double = 0
+            sum = temp / Double(dateframe.text!)!
             dateframe.text = "\(sum)"
         }
     }
     
     @IBAction func minus(_ sender: Any) {
         x = 2
-        temp =  Int(dateframe.text!)!
+        temp =  Double(dateframe.text!)!
         dateframe.text = ""
     }
     
     @IBAction func ride(_ sender: Any) {
         x = 3
-        temp =  Int(dateframe.text!)!
+        temp =  Double(dateframe.text!)!
         dateframe.text = ""
     }
     
     @IBAction func divide(_ sender: Any) {
         x = 4
-        temp =  Int(dateframe.text!)!
+        temp =  Double(dateframe.text!)!
         dateframe.text = ""
     }
     
