@@ -70,6 +70,10 @@ class ViewController: UIViewController {
         
     }
     
+    
+    
+    
+    
     @IBAction func caculater(_ sender: Any) {
         if(x == 1)
         {
@@ -95,6 +99,12 @@ class ViewController: UIViewController {
             sum = temp / Double(dateframe.text!)!
             dateframe.text = "\(sum)"
         }
+        if(x == 5)
+        {
+            var sum:Double = 0
+            sum = sqrt (temp)
+            dateframe.text = "\(sum)"
+        }
     }
     
     @IBAction func minus(_ sender: Any) {
@@ -115,8 +125,13 @@ class ViewController: UIViewController {
         dateframe.text = ""
     }
     
+    @IBAction func signofevolution(_ sender: Any) {
+        x = 5
+        temp =  Double(dateframe.text!)!
+        dateframe.text = ""
+    }
     
-    
+  
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
