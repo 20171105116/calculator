@@ -63,48 +63,18 @@ class ViewController: UIViewController {
         temp = 0
         dateframe.text = ""
     }
-    @IBAction func add(_ sender: Any) {
-        x = 1
-        temp = temp + Double(dateframe.text!)!
-        dateframe.text = ""
-        
+    
+    @IBAction func Pi(_ sender: Any) {
+        dateframe.text = dateframe.text! + "3.1415926535"
     }
     
     
     
     
-    
-    @IBAction func caculater(_ sender: Any) {
-        if(x == 1)
-        {
-        var sum:Double = 0
-        sum = temp + Double(dateframe.text!)!
-        dateframe.text = "\(sum)"
-        }
-        if(x == 2)
-        {
-            var sum:Double = 0
-            sum = temp - Double(dateframe.text!)!
-            dateframe.text = "\(sum)"
-        }
-        if(x == 3)
-        {
-            var sum:Double = 0
-            sum = temp * Double(dateframe.text!)!
-            dateframe.text = "\(sum)"
-        }
-        if(x == 4)
-        {
-            var sum:Double = 0
-            sum = temp / Double(dateframe.text!)!
-            dateframe.text = "\(sum)"
-        }
-        if(x == 5)
-        {
-            var sum:Double = 0
-            sum = sqrt (temp)
-            dateframe.text = "\(sum)"
-        }
+    @IBAction func add(_ sender: Any) {
+        x = 1
+        temp = temp + Double(dateframe.text!)!
+        dateframe.text = ""
     }
     
     @IBAction func minus(_ sender: Any) {
@@ -130,7 +100,56 @@ class ViewController: UIViewController {
         temp =  Double(dateframe.text!)!
         dateframe.text = ""
     }
+
+    @IBAction func power(_ sender: Any) {
+        x = 6
+        temp =  Double(dateframe.text!)!
+        dateframe.text = ""
+    }
     
+    
+    
+    @IBAction func caculater(_ sender: Any) {
+        if(x == 1)
+        {
+            var sum:Double = 0
+            sum = temp + Double(dateframe.text!)!
+            dateframe.text = "\(sum)"
+        }
+        if(x == 2)
+        {
+            var sum:Double = 0
+            sum = temp - Double(dateframe.text!)!
+            dateframe.text = "\(sum)"
+        }
+        if(x == 3)
+        {
+            var sum:Double = 0
+            sum = temp * Double(dateframe.text!)!
+            dateframe.text = "\(sum)"
+        }
+        if(x == 4)
+        {
+            var sum:Double = 0
+            sum = temp / Double(dateframe.text!)!
+            dateframe.text = "\(sum)"
+        }
+        if(x == 5)
+        {
+            var sum:Double = 0
+            sum = sqrt (temp)
+            dateframe.text = "\(sum)"
+        }
+        if(x == 6)
+        {
+            var sum:Double = 0
+            sum = pow(temp,Double(dateframe.text!)!)
+            dateframe.text = "\(sum)"
+        }
+        
+        
+        
+    }
   
     override func viewDidLoad() {
         super.viewDidLoad()
