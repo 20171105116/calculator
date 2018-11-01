@@ -191,8 +191,8 @@
                                     <action selector="divide:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KVd-eO-HDs"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="  阿全      计算" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rrG-sU-LoK">
-                                <rect key="frame" x="138" y="96" width="102" height="30"/>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="  三金      计算" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rrG-sU-LoK">
+                                <rect key="frame" x="138" y="96" width="109" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -227,7 +227,6 @@
                                 <state key="normal" title="π"/>
                                 <connections>
                                     <action selector="Pi:" destination="BYZ-38-t0r" eventType="touchUpInside" id="v2r-xB-bwv"/>
-                                    <action selector="button0:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CuW-eB-11V"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DpW-kl-qTk">
