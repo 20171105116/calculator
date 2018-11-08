@@ -122,7 +122,8 @@ class ViewController: UIViewController {
     
     @IBAction func clear(_ sender: Any) {
         temp = 0
-        dateframe.text = "0.0"
+        dateframe.text = ""
+        calFlag = 0
     }
     
     @IBAction func Pi(_ sender: Any) {
@@ -133,7 +134,7 @@ class ViewController: UIViewController {
     
     
     @IBAction func add(_ sender: Any) {
-        if calFlag == 1
+        if x == 1
         {
             dateframe.text = "\(temp + Double(dateframe.text!)!)"
         }
@@ -147,21 +148,31 @@ class ViewController: UIViewController {
         {
             dateframe.text = "\(temp - Double(dateframe.text!)!)"
         }
+        
         temp = Double(dateframe.text!)!
         calFlag = 2
         x = 2
     }
     
     @IBAction func ride(_ sender: Any) {
+        if x == 3
+        {
+            temp = 1
+            dateframe.text = "\(temp * Double(dateframe.text!)!)"
+        }
+        temp = Double(dateframe.text!)!
+        calFlag = 2
         x = 3
-        temp =  Double(dateframe.text!)!
-        dateframe.text = ""
     }
     
     @IBAction func divide(_ sender: Any) {
+        if x == 4
+        {
+            dateframe.text = "\(temp / Double(dateframe.text!)!)"
+        }
+        temp = Double(dateframe.text!)!
+        calFlag = 2
         x = 4
-        temp =  Double(dateframe.text!)!
-        dateframe.text = ""
     }
     
     @IBAction func signofevolution(_ sender: Any) {
@@ -175,13 +186,19 @@ class ViewController: UIViewController {
         temp =  Double(dateframe.text!)!
         dateframe.text = ""
     }
+  
     
+    @IBAction func reversion(_ sender: Any) {
+        temp = Double(dateframe.text!)!
+        dateframe.text = "\(temp * -1)"
+    }
     
     
     @IBAction func caculater(_ sender: Any) {
         calFlag = 2
         if(x == 1)
         {
+            
             var sum:Double = 0
             sum = temp + Double(dateframe.text!)!
             dateframe.text = "\(sum)"
