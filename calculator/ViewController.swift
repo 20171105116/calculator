@@ -127,7 +127,13 @@ class ViewController: UIViewController {
     }
     
     @IBAction func Pi(_ sender: Any) {
-        dateframe.text = dateframe.text! + "3.1415926535"
+        if calFlag == 1
+        {
+            dateframe.text = dateframe.text! + "3.1415926535"
+        }else{
+            dateframe.text = "3.1415926535"
+        }
+        calFlag = 1
     }
     
     
@@ -206,15 +212,19 @@ class ViewController: UIViewController {
         }
         if(x == 2)
         {
+            
             var sum:Double = 0
             sum = temp - Double(dateframe.text!)!
             dateframe.text = "\(sum)"
+            
         }
         if(x == 3)
         {
+            
             var sum:Double = 0
             sum = temp * Double(dateframe.text!)!
             dateframe.text = "\(sum)"
+            
         }
         if(x == 4)
         {
