@@ -11,7 +11,9 @@ import UIKit
 class ViewController: UIViewController {
 
     var x = 0
+    
     var temp:Double = 0
+    
     var calFlag:Int = 0
     
     @IBOutlet weak var dateframe: UITextField!
